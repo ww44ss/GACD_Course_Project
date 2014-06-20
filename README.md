@@ -33,12 +33,12 @@ Sets the working directory and does a check to see if the data set are present.
 
 The below is a list of the files in the UCI HAR Dataset. Those in *BOLD* are read in
 
-*"activity___labels.txt"* "features-info.txt"   *"features.txt"*        "OutputData.txt"      "OutputData2.txt"    
+*"activity-labels.txt"* "features-info.txt"   *"features.txt"*        "OutputData.txt"      "OutputData2.txt"    
 "OutputData3.txt"     "OututData.txt"       "OututData2.txt"      "README.txt"          "test"               
 "train" 
 
 The files in the directory *test* which are read are:
- "Inertial Signals" *"subject___test.txt"* *"X___test.txt"* *"y___test.txt"*   
+ "Inertial Signals" *"subject-test.txt"* *"X-test.txt"* *"y-test.txt"*   
 
 similar for *train*
 
@@ -51,7 +51,7 @@ This is intended to select only mean and standard devaition measurements
 
 These lists are combined using | ("or") to form a superset of "desired columns" of data.
 
-cols___I___want - mean___cols | std_cols
+cols-I-want - mean-cols | std-cols
 
 #####SECTION FOUR: combine the raw data
 Bind the data into the first output data frame
