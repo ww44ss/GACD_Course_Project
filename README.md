@@ -33,18 +33,18 @@ Sets the working directory and does a check to see if the data set are present.
 
 The below is a list of the files in the UCI HAR Dataset. Those in *BOLD* are read in
 
-*"activity-labels.txt"* "features-info.txt"   *"features.txt"*        "OutputData.txt"      "OutputData2.txt"    
+*activity-labels.txt* "features-info.txt"   *features.txt*        "OutputData.txt"      "OutputData2.txt"    
 "OutputData3.txt"     "OututData.txt"       "OututData2.txt"      "README.txt"          "test"               
 "train" 
 
 The files in the directory *test* which are read are:
- "Inertial Signals" *"subject-test.txt"* *"X-test.txt"* *"y-test.txt"*   
+ "Inertial Signals" *subject-test.txt* *X-test.txt* *y-test.txt*   
 
 similar for *train*
 
 the program uses *read.table* to import the data
 
-###SECTION THREE: Select the data
+#####SECTION THREE: Select the data
 
 select the dat using the *grepl* instruction based on the selection "-mean()" and "-std()" and comparing to the features.txt data. 
 This is intended to select only mean and standard devaition measurements
