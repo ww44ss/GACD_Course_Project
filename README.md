@@ -1,57 +1,74 @@
-GACD_Course_Project
+##GACD_Course_Project
 ===================
 
-#Getting and Cleaning Data Course Project
+###Getting and Cleaning Data Course Project
 
 
-##This describes the R program run_Analysis.R contained in this file. 
+###This README describes *run_analysis.R* contained in this repository 
 
 
-The program reads data from the _UCI HAR Dataset_ 
+The program reads data from the _UCI HAR Dataset_ and performs rudimentary data cleaning to providea tidy data set with:
+1. selected data on the mean() and std() measurements 
+2. Labels activities
+2. combined test and training data files for all 30 subjects
+3. adds descriptive activity names and labels data columns
 
+#####For referenere here is where the data comes from
+
+This link provides a description of the experiment, the data description, and a link for downloading. 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-_Citation:_
+_Recommended Citation:_
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-#####SECTION ONE
-The program does a check to see if the data set are present.
+
+###>
+###DESCRIPTION OF THE PROGRAM
+
+
+#####SECTION ONE: Set the working directory and check to see if data are present.
+Sets the working directory and does a check to see if the data set are present.
 
 #####SECTION TWO: Read data files
 
 The below is a list of the files in the UCI HAR Dataset. Those in *BOLD* are read in
 
-*"activity-labels.txt"* "features-info.txt"   *"features.txt"*        "OutputData.txt"      "OutputData2.txt"    
+*"activity___labels.txt"* "features-info.txt"   *"features.txt"*        "OutputData.txt"      "OutputData2.txt"    
 "OutputData3.txt"     "OututData.txt"       "OututData2.txt"      "README.txt"          "test"               
 "train" 
 
 The files in the directory *test* which are read are:
- "Inertial Signals" *"subject_test.txt"* *"X_test.txt"* *"y_test.txt"*   
+ "Inertial Signals" *"subject___test.txt"* *"X___test.txt"* *"y___test.txt"*   
 
 similar for *train*
 
-###SECTION THREE
+the program uses *read.table* to import the data
 
-select the dat using the grepl instruction based on the selection "-mean()" and "-std()"
+###SECTION THREE: Select the data
+
+select the dat using the *grepl* instruction based on the selection "-mean()" and "-std()" and comparing to the features.txt data. 
 This is intended to select only mean and standard devaition measurements
 
 These lists are combined using | ("or") to form a superset of "desired columns" of data.
 
-#####SECTION FOUR
+cols___I___want - mean___cols | std_cols
+
+#####SECTION FOUR: combine the raw data
 Bind the data into the first output data frame
 First binding rows of data of the train and test data sets
 then combining column data of users and activities
 
-#####SECTION FIVE
+#####SECTION FIVE: Name the data
 Name the columns of data 
 
-Take the final result adn store that as a parameter Tidy_Data_One. This might be useful for debug. 
+Take the final result adn store that as a parameter Tidy-Data-One. 
+That file is not speciically requested by the assignemnt but is an important intermeidate point. 
+This might be useful for later debug. 
 
-#####SECTION SIX
+#####SECTION SIX: create the prescribed tiday data set of means
 Create the prescribed tidy data set by using the aggregate command to average over common subjects and activities. 
 
-Output the data to the file Tidy_Data_Final
-
+Output the data to the file ""Tidy___Data___Final""
 
 
 
