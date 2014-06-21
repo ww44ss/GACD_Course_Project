@@ -2,7 +2,11 @@
 ===================
 
 ###Getting and Cleaning Data Course Project
-
+This is the course project for the Coursera class "getting ann cleaning data"
+The program reads specified data and then does prescribed data cleaning, creating an output file with 
+180 rows (6 activites X 30 participants) and 68 data columns. 
+the first data column is the subject number, the second data column is the name of the activity. 
+There are 66 columns of numeric data.
 
 ###This README describes *run_analysis.R* contained in this repository 
 
