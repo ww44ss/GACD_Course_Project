@@ -6,19 +6,19 @@
 
 ###This README describes *run_analysis.R* contained in this repository 
 
+The program assumes the directory *UCI HAR Dataset* is in the working directory. 
 
-The program reads data from the _UCI HAR Dataset_ and performs rudimentary data cleaning to providea tidy data set with:
+
+The program reads data from the *UCI HAR Dataset* and performs rudimentary data cleaning to providea tidy data set with:
 1. selected data on the mean() and std() measurements 
 2. Labels activities
 2. combined test and training data files for all 30 subjects
 3. adds descriptive activity names and labels data columns
 
-#####For referenere here is where the data comes from
+For reference the data comes from here
 
-This link provides a description of the experiment, the data description, and a link for downloading. 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-_Recommended Citation:_
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 
